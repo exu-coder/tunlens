@@ -45,7 +45,7 @@ jobs:
       - uses: android-actions/setup-android@v3
         id: ndk
         with:
-          ndk-version: '27.2.12479018'
+          ndk-version: '27.0.12077973'
       - uses: dtolnay/rust-toolchain@stable
       - name: Install cargo-ndk
         run: cargo install cargo-ndk

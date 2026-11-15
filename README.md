@@ -122,7 +122,7 @@ cargo run -- socks --listen 127.0.0.1:1080    # JSON events on stdout
 ## **📱 𝐀𝐧𝐝𝐫𝐨𝐢𝐝 𝐀𝐏𝐊**
 
 ```bash
-export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/27.2.12479018
+export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/27.0.12077973
 cargo install cargo-ndk            # once
 android/build-native.sh            # libtunlens.so -> app/src/main/jniLibs/<abi>/
 cd android && gradle assembleDebug

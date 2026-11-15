@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/smoltcp-userspace%20TCP%2FIP-1F6FEB?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Mode-Read--Only-00C853?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"/>
+  <img src="https://github.com/exu-coder/tunlens/actions/workflows/build.yml/badge.svg"/>
 </p>
 
 <p align="center"><b>𝐭𝐮𝐧𝐥𝐞𝐧𝐬</b></p>
@@ -124,11 +125,16 @@ cargo run -- socks --listen 127.0.0.1:1080    # JSON events on stdout
 export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/27.2.12479018
 cargo install cargo-ndk            # once
 android/build-native.sh            # libtunlens.so -> app/src/main/jniLibs/<abi>/
-cd android && ./gradlew assembleDebug
+cd android && gradle assembleDebug
 ```
 
 `build-native.sh` 𝐭𝐞𝐦𝐩𝐨𝐫𝐚𝐫𝐢𝐥𝐲 𝐦𝐨𝐯𝐞𝐬 𝐭𝐡𝐞 𝐡𝐨𝐬𝐭 𝐜𝐚𝐫𝐠𝐨 𝐜𝐨𝐧𝐟𝐢𝐠 𝐚𝐬𝐢𝐝𝐞 𝐬𝐨 𝐨𝐧𝐥𝐲 𝐭𝐡𝐞 𝐍𝐃𝐊
 𝐬𝐲𝐬𝐫𝐨𝐨𝐭 𝐢𝐬 𝐮𝐬𝐞𝐝. 𝐓𝐡𝐞 𝐊𝐨𝐭𝐥𝐢𝐧 𝐮𝐬𝐞𝐬 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤 𝐀𝐏𝐈𝐬 𝐨𝐧𝐥𝐲, 𝐧𝐨 𝐀𝐧𝐝𝐫𝐨𝐢𝐝𝐗.
+
+𝐓𝐡𝐞 𝐬𝐚𝐦𝐞 𝐬𝐭𝐞𝐩𝐬 𝐫𝐮𝐧 𝐢𝐧 𝐆𝐢𝐭𝐇𝐮𝐛 𝐀𝐜𝐭𝐢𝐨𝐧𝐬 (`.github/workflows/build.yml`): 𝐭𝐡𝐞 𝐑𝐮𝐬𝐭
+𝐭𝐞𝐬𝐭𝐬, 𝐭𝐡𝐞 𝐧𝐚𝐭𝐢𝐯𝐞 𝐛𝐮𝐢𝐥𝐝, 𝐚𝐧𝐝 `gradle assembleDebug`, 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐫𝐞𝐬𝐮𝐥𝐭𝐢𝐧𝐠 𝐀𝐏𝐊
+𝐮𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐚𝐬 𝐚𝐧 𝐚𝐫𝐭𝐢𝐟𝐚𝐜𝐭. 𝐀 𝐥𝐨𝐜𝐚𝐥 𝐛𝐮𝐢𝐥𝐝 𝐧𝐞𝐞𝐝𝐬 𝐭𝐡𝐞 𝐀𝐧𝐝𝐫𝐨𝐢𝐝 𝐍𝐃𝐊 𝐚𝐧𝐝 𝐆𝐫𝐚𝐝𝐥𝐞 𝐨𝐧
+`PATH`; 𝐭𝐡𝐞 𝐰𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐢𝐧𝐬𝐭𝐚𝐥𝐥𝐬 𝐛𝐨𝐭𝐡.
 
 ### **⚙️ 𝐒𝐞𝐭𝐮𝐩**
 

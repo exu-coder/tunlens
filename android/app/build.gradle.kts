@@ -40,7 +40,7 @@ android {
 // It is intentionally not wired into `preBuild`, so a plain Kotlin build still
 // works on a machine without the Rust toolchain.
 tasks.register<Exec>("nativeRelease") {
-    workingDir = file("../rust")
+    workingDir = file("../../rust")
     commandLine("cargo", "ndk", "-t", "arm64-v8a", "-t", "armeabi-v7a",
-        "-o", "../android/app/src/main/jniLibs", "build", "--release")
+        "-o", "../../android/app/src/main/jniLibs", "build", "--release")
 }

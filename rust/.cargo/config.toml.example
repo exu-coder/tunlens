@@ -1,0 +1,23 @@
+# Example only — do not copy this unless it describes your machine.
+#
+# This is the config used to build the engine on a Termux/aarch64 Android host
+# that has no NDK. There, rustc's host triple *is* aarch64-linux-android, so the
+# linker must resolve bionic from /system/lib64.
+#
+# On a normal desktop: leave this file out entirely. The default host linker is
+# correct.
+# For an APK: use android/build-native.sh (cargo-ndk), which passes its own
+# linker and sysroot through the environment. Do not add this file then.
+#
+# Cargo reads .cargo/config.toml from the *current working directory*, not from
+# the manifest's directory, so host builds must be run from inside rust/.
+
+[target.aarch64-linux-android]
+linker = "/data/data/com.termux/files/usr/bin/clang"
+rustflags = [
+  "-C", "link-arg=-L/data/data/com.termux/files/usr/lib",
+  "-C", "link-arg=-L/system/lib64",
+]
+
+[build]
+target = "aarch64-linux-android"

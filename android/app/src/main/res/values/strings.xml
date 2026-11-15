@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tunlens</string>
+    <string name="capture_channel">Traffic capture</string>
+    <string name="capture_notification">Observing selected apps</string>
+</resources>

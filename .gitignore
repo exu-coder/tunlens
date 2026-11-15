@@ -1,0 +1,25 @@
+# Rust
+/rust/target/
+**/*.rs.bk
+
+# Host-specific cargo config (Termux linker paths).
+# See rust/.cargo/config.toml.example.
+/rust/.cargo/config.toml
+
+# Android / Gradle
+/android/.gradle/
+/android/build/
+/android/app/build/
+/android/local.properties
+/android/app/src/main/jniLibs/
+*.apk
+*.aab
+*.iml
+.idea/
+
+# Native build output
+*.so
+*.o
+
+# OS
+.DS_Store

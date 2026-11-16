@@ -44,7 +44,9 @@ class CaptureService : VpnService() {
             return
         }
 
-        val builder = VpnService.Builder()
+        // Builder is an inner class of VpnService; instantiate it on this
+        // service instance rather than qualifying it as VpnService.Builder().
+        val builder = Builder()
             .setSession("tunlens")
             .setMtu(MTU)
             .addAddress(TUN_ADDRESS, TUN_PREFIX)
@@ -67,7 +69,7 @@ class CaptureService : VpnService() {
             return
         }
 
-        val descriptor = try {
+        val descriptor: ParcelFileDescriptor? = try {
             builder.establish()
         } catch (err: Exception) {
             Log.e(TAG, "establish() failed", err)

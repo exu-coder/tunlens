@@ -2,7 +2,7 @@ package dev.tunlens
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.app.VpnService
+import android.net.VpnService
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
